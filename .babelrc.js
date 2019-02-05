@@ -5,6 +5,6 @@ module.exports = {
 		'@babel/proposal-class-properties',
 	],
 	presets: [
-		[ '@babel/preset-env' ],
+		[ '@babel/preset-env' ]
 	],
 };
