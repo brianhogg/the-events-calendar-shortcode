@@ -4,7 +4,7 @@ Tags: event, events, calendar, shortcode, modern tribe
 Requires at least: 4.1
 Requires PHP: 5.3
 Tested up to: 5.4
-Stable tag: 2.3.1
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -178,10 +178,16 @@ The [pro version of the plugin](https://eventcalendarnewsletter.com/the-events-c
 
 == Upgrade Notice ==
 
+= 2.4 =
+* Updating block script dependencies
+
 = 2.3.1 =
 Adds link to full documentation
 
 == Changelog ==
+
+= 2.4 =
+* Updating block script dependencies
 
 = 2.3.1 =
 * Adds link to full documentation and short walk-through video
