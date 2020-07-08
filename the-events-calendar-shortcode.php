@@ -206,6 +206,11 @@ class Events_Calendar_Shortcode
                         'taxonomy' => 'tribe_events_cat',
                         'field' => 'slug',
                         'terms' => $cat,
+                    ),
+                    array(
+                        'taxonomy' => 'tribe_events_cat',
+                        'field' => 'id',
+                        'terms' => $cat,
                     )
                 );
 			}
