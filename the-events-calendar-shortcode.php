@@ -154,7 +154,7 @@ class Events_Calendar_Shortcode
 			return '';
 		}
 
-		global $post;
+		global $post, $ecs_last_event_count;
 		$output = '';
 
 		$atts = shortcode_atts( apply_filters( 'ecs_shortcode_atts', array(
@@ -294,7 +294,8 @@ class Events_Calendar_Shortcode
 		$posts = tribe_get_events( $args );
         $posts = apply_filters( 'ecs_filter_events_after_get', $posts, $atts );
 
-		if ( $posts or apply_filters( 'ecs_always_show', false, $atts ) ) {
+        $ecs_last_event_count = 0;
+        if ( $posts or apply_filters( 'ecs_always_show', false, $atts ) ) {
 			$output = apply_filters( 'ecs_beginning_output', $output, $posts, $atts );
 			$output .= apply_filters( 'ecs_start_tag', '<ul class="ecs-event-list">', $atts, count( (array) $posts ) );
 			$atts['contentorder'] = explode( ',', $atts['contentorder'] );
@@ -304,6 +305,7 @@ class Events_Calendar_Shortcode
 				$event_output = '';
 				if ( apply_filters( 'ecs_skip_event', false, $atts, $post ) )
 				    continue;
+				$ecs_last_event_count++;
 				$category_slugs = array();
 				$category_list = get_the_terms( $post, 'tribe_events_cat' );
 				$featured_class = ( get_post_meta( get_the_ID(), '_tribe_featured', true ) ? ' ecs-featured-event' : '' );
@@ -388,7 +390,7 @@ class Events_Calendar_Shortcode
 			}
 
 		} else { //No Events were Found
-			$output .= apply_filters( 'ecs_no_events_found_message', sprintf( translate( $atts['message'], 'the-events-calendar' ), tribe_get_event_label_plural_lowercase() ), $atts );
+			$output .= '<div class="ecs-no-events">' . apply_filters( 'ecs_no_events_found_message', sprintf( translate( $atts['message'], 'the-events-calendar' ), tribe_get_event_label_plural_lowercase() ), $atts ) . '</div>';
 		} // endif
 
 		wp_reset_postdata();
