@@ -3,7 +3,7 @@
  Plugin Name: The Events Calendar Shortcode & Block
  Plugin URI: https://eventcalendarnewsletter.com/the-events-calendar-shortcode/
  Description: An addon to add shortcode and new editor block functionality for The Events Calendar Plugin by Modern Tribe.
- Version: 2.4
+ Version: 2.5
  Author: Event Calendar Newsletter
  Author URI: https://eventcalendarnewsletter.com/the-events-calendar-shortcode
  Contributors: brianhogg
