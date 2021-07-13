@@ -178,6 +178,9 @@ The [pro version of the plugin](https://eventcalendarnewsletter.com/the-events-c
 
 == Upgrade Notice ==
 
+= 2.5 =
+* Adding div when there are no events found, to avoid display issues on some themes
+
 = 2.4 =
 * Updating block script dependencies
 
@@ -185,6 +188,9 @@ The [pro version of the plugin](https://eventcalendarnewsletter.com/the-events-c
 Adds link to full documentation
 
 == Changelog ==
+
+= 2.5 =
+* Adding div when there are no events found, to avoid display issues on some themes
 
 = 2.4 =
 * Updating block script dependencies
